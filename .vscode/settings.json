@@ -1,0 +1,95 @@
+{
+    // 配置Code Runner插件的执行命令映射
+    "code-runner.executorMap": {
+        "c": "cd $dir && mkdir -p build && gcc $fileName -o build/$fileNameWithoutExt && build/$fileNameWithoutExt",
+        "cpp": "(if not exist $dirbuild (mkdir $dirbuild)) && cd $dir && g++ $fileName -o build\\$fileNameWithoutExt && build\\$fileNameWithoutExt"
+        
+    },
+    
+    // 文件编码设置
+    "files.encoding": "utf8",           // 全局默认使用UTF-8编码
+    "files.autoGuessEncoding": false,   // 禁用自动编码检测
+    "files.encodingConversion": {},     // 禁用自动编码转换
+    "code-runner.runInTerminal": true,   // 在终端中运行代码以支持输入输出
+    
+    // 文件关联配置（将特定头文件识别为C++）
+    "files.associations": {
+        "array": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "cctype": "cpp",
+        "charconv": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "optional": "cpp",
+        "random": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "format": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "numbers": "cpp",
+        "ostream": "cpp",
+        "span": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "text_encoding": "cpp",
+        "typeinfo": "cpp",
+        "variant": "cpp",
+        "cinttypes": "cpp",
+        "fstream": "cpp"
+    },
+    "editor.defaultFormatter": "danielpinto8zz6.c-cpp-compile-run",  // 默认格式化工具
+    "editor.formatOnType": true,  // 输入时自动格式化
+    "C_Cpp.formatting": "vcFormat",                // 使用VC++格式
+    "C_Cpp.clang_format_style": "Visual Studio",   // Clang格式风格为VS风格
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",    // 代码块左大括号同行
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "newLine",  // 函数左大括号换行
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",     // 类型定义左大括号同行
+    "C_Cpp.vcFormat.space.pointerReferenceAlignment": "right",  // 指针符号右对齐  
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"  // C++使用官方插件格式化
+    },
+    "C_Cpp.vcFormat.newLine.beforeElse": false,                     // else前不换行
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true, // 空函数右大括号同行
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": true,    // 空类型右大括号同行
+    "C_Cpp.vcFormat.space.beforeComma": false,                      // 逗号前不加空格
+    "C_Cpp.vcFormat.space.groupSquareBrackets": true,               // 方括号内内容分组
+    "C_Cpp.vcFormat.space.betweenEmptyBraces": true,                // 空大括号间加空格
+    "C_Cpp.vcFormat.space.removeBeforeSemicolon": false,            // 分号前不去空格
+    "C_Cpp.vcFormat.space.betweenEmptySquareBrackets": false,       // 空方括号间不加空格
+    "C_Cpp.vcFormat.space.insertAfterSemicolon": false,             // 分号后不加空格
+    "C_Cpp.vcFormat.space.afterComma": true,
+    "terminal.integrated.suggest.providers": {
+        "vscode.terminal-suggest": false,
+        "lsp": false
+    } // 逗号后加空格
+}
