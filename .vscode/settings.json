@@ -11,6 +11,7 @@
     "files.autoGuessEncoding": false,   // 禁用自动编码检测
     "files.encodingConversion": {},     // 禁用自动编码转换
     "code-runner.runInTerminal": true,   // 在终端中运行代码以支持输入输出
+    "terminal.integrated.defaultProfile.windows": "Command Prompt", // 设置默认终端为命令提示符
     
     // 文件关联配置（将特定头文件识别为C++）
     "files.associations": {
